@@ -1,0 +1,30 @@
+{
+  "name": "quidax-node",
+  "version": "1.0.0",
+  "description": "The Quidax Node library provides an easy access to the Quidax Developer API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.test.js --timeout 20000 --exit"
+  },
+  "author": {
+    "name": "Oye Olalekan Johnson",
+    "email": "jolalekan@quidax.com"
+  },
+  "keywords": [
+    "Quidax",
+    "Crypto",
+    "crypto payments",
+    "stablecoins",
+    "BEP20",
+    "NodeJS"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.1",
+    "mocha": "^10.0.0"
+  }
+}
