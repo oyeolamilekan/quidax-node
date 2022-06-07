@@ -273,12 +273,104 @@ const quidax = quidax.deposit.fetchAllDeposit('<account_id>', 'btc', 'accepted')
 
 ```
 
-#### Fetch orders of user.
+#### Fetch an order of user.
 ```javascript
 const Quidax = require('@quidax/src')
 
 quidax = new Quidax(secretKey)
 
 const quidax = quidax.deposit.fetchDeposit('<account_id>', '<deposit_id>')
+
+```
+
+### **InstantOrder**: This endpoint is used to buy and sell crypto for an authenticated user.
+&nbsp;
+
+#### Fetch all instantOrder of a user, filtered by user_id.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.instantOrder.fetchAllInstantOrders('<account_id>', 'btcngn', 'done', 'desc')
+
+```
+
+#### Fetch detail instantOrder of user.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.instantOrder.fetchInstantOrdersDetail('<account_id>', '<instantOrder_id>')
+
+```
+
+#### Requotes an instant order.
+```javascript
+const Quidax = require('@quidax/src')
+ 
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.instantOrder.requoteInstantOrder('<account_id>', '<instantOrder_id>')
+
+```
+
+#### Confirm an instant order.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.instantOrder.confirmInstantOrder('<account_id>', '<instantOrder_id>')
+
+```
+
+#### Create an instant order(buy crypto from fiat).
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.instantOrder.createInstantOrder('<account_id>', {
+    "bid": "ngn",
+    "ask": "btc",
+    "type": "buy",
+    "total": "5",
+    "unit": "ngn"
+})
+
+```
+
+#### Create an instant order(sell crypto to fiat).
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.instantOrder.createInstantOrder('<account_id>', {
+    "bid": "ngn",
+    "ask": "trx",
+    "type": "sell",
+    "volume": "0.00002",
+    "unit": "trx"
+})
+
+```
+
+
+#### Create an instant order(buy a fixed number of the asset, regardless of the price.).
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.instantOrder.createInstantOrder('<account_id>', {
+    "bid": "ngn",
+    "ask": "btc",
+    "type": "buy",
+    "volume": "5",
+    "unit": "btc"
+}})
 
 ```
