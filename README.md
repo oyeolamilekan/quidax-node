@@ -67,7 +67,7 @@ const quidax = quidax.users.editAccount('<user_id>',{
 ```
 
 
-### **Markets**: The Market API allows authenticated users to fetch market-related data such as tickers, k-line (HLOC) data, order book items, and market depth.
+### **Markets**: Fetch market data.
 &nbsp;
 
 #### List all the markets
@@ -130,7 +130,7 @@ const quidax = quidax.markets.fetchKLineDataWithPendingTradesForAMarket('btcngn'
 
 ```
 
-### **Wallets**: Basically quidax allows you to programmatically create and manage both fiat and cryptocurrency wallets for your user.
+### **Wallets**: Create wallets for user or sub-users.
 &nbsp;
 
 #### Fetch all user wallets
@@ -191,5 +191,28 @@ const Quidax = require('@quidax/src')
 quidax = new Quidax(secretKey)
 
 const quidax = quidax.wallets.fetchPaymentAddressById('<user_id>', 'btc', '<address_id>')
+
+```
+
+### **Trade**: Fetch trades of an asset.
+&nbsp;
+
+#### Fetch trades of user.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.trade.trades('<user_id>')
+
+```
+
+#### Fetch recent trades for a given market pair.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.trade.fetchRecentTradesForMarketPair('btcngn')
 
 ```
