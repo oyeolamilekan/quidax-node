@@ -259,3 +259,26 @@ quidax = new Quidax(secretKey)
 const quidax = quidax.orders.cancelOrder('<account_id>', '<order_id>')
 
 ```
+
+### **Deposits**: This endpoint is used to fetch endpoints
+&nbsp;
+
+#### Fetch orders of user.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.deposit.fetchAllDeposit('<account_id>', 'btc', 'accepted')
+
+```
+
+#### Fetch orders of user.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.deposit.fetchDeposit('<account_id>', '<deposit_id>')
+
+```
