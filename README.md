@@ -66,8 +66,6 @@ const quidax = quidax.users.editAccount('<user_id>',{
 
 ```
 
-&nbsp;
-
 
 ### **Markets**: The Market API allows authenticated users to fetch market-related data such as tickers, k-line (HLOC) data, order book items, and market depth.
 &nbsp;
@@ -129,5 +127,69 @@ const Quidax = require('@quidax/src')
 quidax = new Quidax(secretKey)
 
 const quidax = quidax.markets.fetchKLineDataWithPendingTradesForAMarket('btcngn', 5, 10, "<timestamp>")
+
+```
+
+### **Wallets**: Basically quidax allows you to programmatically create and manage both fiat and cryptocurrency wallets for your user.
+&nbsp;
+
+#### Fetch all user wallets
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.wallets.fetchAllWallets('<user_id>')
+
+```
+
+#### Fetches currency wallet.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.wallets.fetchCurrencyWallet('<user_id>', 'btc')
+
+```
+
+#### Fetch payment addresses related to the wallet
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.wallets.fetchPaymentAddresses('<user_id>', 'btc')
+
+```
+
+
+#### Fetch payment address for a wallet.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.wallets.fetchPaymentAddress('<user_id>', 'btc')
+
+```
+
+#### Create payment address for a customer
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.wallets.createPaymentAddress('<user_id>', 'btc')
+
+```
+
+#### Fetch payment address by id.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.wallets.fetchPaymentAddressById('<user_id>', 'btc', '<address_id>')
 
 ```
