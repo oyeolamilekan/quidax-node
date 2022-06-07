@@ -216,3 +216,46 @@ quidax = new Quidax(secretKey)
 const quidax = quidax.trade.fetchRecentTradesForMarketPair('btcngn')
 
 ```
+
+### **Orders**: Place trades on the orderbook.
+&nbsp;
+
+#### Fetch orders of user.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.orders.getAllOrders('me', 'btcngn', 'accepted', 'desc')
+
+```
+
+#### Fetch order details.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.orders.getOrderDetails('<account_id>', '<order_id>')
+
+```
+
+#### Create a buy or sell order.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.orders.createBuyOrSellOrder('<account_id>', 'btcngn', 'ask', 'market', '20', '50')
+
+```
+
+#### Cancel order.
+```javascript
+const Quidax = require('@quidax/src')
+
+quidax = new Quidax(secretKey)
+
+const quidax = quidax.orders.cancelOrder('<account_id>', '<order_id>')
+
+```
