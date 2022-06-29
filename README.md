@@ -17,9 +17,9 @@ See the [Quidax API docs](https://docs.quidax.com/docs/overview).
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.users.create({ 
+const data = quidax.users.create({ 
     email: 'test@gmail.com', 
     first_name: 'test', 
     last_name: 'user' ,
@@ -33,9 +33,9 @@ const quidax = quidax.users.create({
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.users.getAllSubAccounts()
+const data = quidax.users.getAllSubAccounts()
 
 ```
 
@@ -44,9 +44,9 @@ const quidax = quidax.users.getAllSubAccounts()
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.users.getAccountDetails('<user_id>')
+const data = quidax.users.getAccountDetails('<user_id>')
 
 ```
 
@@ -55,9 +55,9 @@ const quidax = quidax.users.getAccountDetails('<user_id>')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.users.editAccount('<user_id>',{ 
+const data = quidax.users.editAccount('<user_id>',{ 
     email: 'test@gmail.com', 
     first_name: 'test', 
     last_name: 'user' ,
@@ -74,9 +74,9 @@ const quidax = quidax.users.editAccount('<user_id>',{
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.markets.listAllMarkets()
+const data = quidax.markets.listAllMarkets()
 
 ```
 
@@ -84,9 +84,9 @@ const quidax = quidax.markets.listAllMarkets()
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.markets.listMarketTickers()
+const data = quidax.markets.listMarketTickers()
 
 ```
 
@@ -94,9 +94,9 @@ const quidax = quidax.markets.listMarketTickers()
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.markets.fetchMarketTicker('btcngn')
+const data = quidax.markets.fetchMarketTicker('btcngn')
 
 ```
 
@@ -104,9 +104,9 @@ const quidax = quidax.markets.fetchMarketTicker('btcngn')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.markets.fetchOrderBookItemsForAMarket('btcngn', 5, 5)
+const data = quidax.markets.fetchOrderBookItemsForAMarket('btcngn', 5, 5)
 
 ```
 
@@ -114,9 +114,9 @@ const quidax = quidax.markets.fetchOrderBookItemsForAMarket('btcngn', 5, 5)
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.markets.fetchMarketTickerDepth('btcngn', 5)
+const data = quidax.markets.fetchMarketTickerDepth('btcngn', 5)
 
 ```
 
@@ -124,9 +124,9 @@ const quidax = quidax.markets.fetchMarketTickerDepth('btcngn', 5)
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.markets.fetchKLineDataWithPendingTradesForAMarket('btcngn', 5, 10, "<timestamp>")
+const data = quidax.markets.fetchKLineDataWithPendingTradesForAMarket('btcngn', 5, 10, "<timestamp>")
 
 ```
 
@@ -137,9 +137,9 @@ const quidax = quidax.markets.fetchKLineDataWithPendingTradesForAMarket('btcngn'
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.wallets.fetchAllWallets('<user_id>')
+const data = quidax.wallets.fetchAllWallets('<user_id>')
 
 ```
 
@@ -147,9 +147,9 @@ const quidax = quidax.wallets.fetchAllWallets('<user_id>')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.wallets.fetchCurrencyWallet('<user_id>', 'btc')
+const data = quidax.wallets.fetchCurrencyWallet('<user_id>', 'btc')
 
 ```
 
@@ -157,9 +157,9 @@ const quidax = quidax.wallets.fetchCurrencyWallet('<user_id>', 'btc')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.wallets.fetchPaymentAddresses('<user_id>', 'btc')
+const data = quidax.wallets.fetchPaymentAddresses('<user_id>', 'btc')
 
 ```
 
@@ -168,9 +168,9 @@ const quidax = quidax.wallets.fetchPaymentAddresses('<user_id>', 'btc')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.wallets.fetchPaymentAddress('<user_id>', 'btc')
+const data = quidax.wallets.fetchPaymentAddress('<user_id>', 'btc')
 
 ```
 
@@ -178,9 +178,9 @@ const quidax = quidax.wallets.fetchPaymentAddress('<user_id>', 'btc')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.wallets.createPaymentAddress('<user_id>', 'btc')
+const data = quidax.wallets.createPaymentAddress('<user_id>', 'btc')
 
 ```
 
@@ -188,9 +188,9 @@ const quidax = quidax.wallets.createPaymentAddress('<user_id>', 'btc')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.wallets.fetchPaymentAddressById('<user_id>', 'btc', '<address_id>')
+const data = quidax.wallets.fetchPaymentAddressById('<user_id>', 'btc', '<address_id>')
 
 ```
 
@@ -201,9 +201,9 @@ const quidax = quidax.wallets.fetchPaymentAddressById('<user_id>', 'btc', '<addr
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.trade.trades('<user_id>')
+const data = quidax.trade.trades('<user_id>')
 
 ```
 
@@ -211,9 +211,9 @@ const quidax = quidax.trade.trades('<user_id>')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.trade.fetchRecentTradesForMarketPair('btcngn')
+const data = quidax.trade.fetchRecentTradesForMarketPair('btcngn')
 
 ```
 
@@ -224,9 +224,9 @@ const quidax = quidax.trade.fetchRecentTradesForMarketPair('btcngn')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.orders.getAllOrders('me', 'btcngn', 'accepted', 'desc')
+const data = quidax.orders.getAllOrders('me', 'btcngn', 'accepted', 'desc')
 
 ```
 
@@ -234,9 +234,9 @@ const quidax = quidax.orders.getAllOrders('me', 'btcngn', 'accepted', 'desc')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.orders.getOrderDetails('<account_id>', '<order_id>')
+const data = quidax.orders.getOrderDetails('<account_id>', '<order_id>')
 
 ```
 
@@ -244,9 +244,15 @@ const quidax = quidax.orders.getOrderDetails('<account_id>', '<order_id>')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.orders.createBuyOrSellOrder('<account_id>', 'btcngn', 'ask', 'market', '20', '50')
+const data = quidax.orders.createBuyOrSellOrder(
+    '<account_id>', 
+    'btcngn', 'ask',
+    'market', 
+    '20', 
+    '50'
+)
 
 ```
 
@@ -254,9 +260,9 @@ const quidax = quidax.orders.createBuyOrSellOrder('<account_id>', 'btcngn', 'ask
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.orders.cancelOrder('<account_id>', '<order_id>')
+const data = quidax.orders.cancelOrder('<account_id>', '<order_id>')
 
 ```
 
@@ -267,9 +273,9 @@ const quidax = quidax.orders.cancelOrder('<account_id>', '<order_id>')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.deposit.fetchAllDeposit('<account_id>', 'btc', 'accepted')
+const data = quidax.deposit.fetchAllDeposit('<account_id>', 'btc', 'accepted')
 
 ```
 
@@ -277,9 +283,9 @@ const quidax = quidax.deposit.fetchAllDeposit('<account_id>', 'btc', 'accepted')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.deposit.fetchDeposit('<account_id>', '<deposit_id>')
+const data = quidax.deposit.fetchDeposit('<account_id>', '<deposit_id>')
 
 ```
 
@@ -290,9 +296,9 @@ const quidax = quidax.deposit.fetchDeposit('<account_id>', '<deposit_id>')
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.instantOrder.fetchAllInstantOrders('<account_id>', 'btcngn', 'done', 'desc')
+const data = quidax.instantOrder.fetchAllInstantOrders('<account_id>', 'btcngn', 'done', 'desc')
 
 ```
 
@@ -300,9 +306,9 @@ const quidax = quidax.instantOrder.fetchAllInstantOrders('<account_id>', 'btcngn
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.instantOrder.fetchInstantOrdersDetail('<account_id>', '<instantOrder_id>')
+const data = quidax.instantOrder.fetchInstantOrdersDetail('<account_id>', '<instantOrder_id>')
 
 ```
 
@@ -310,9 +316,9 @@ const quidax = quidax.instantOrder.fetchInstantOrdersDetail('<account_id>', '<in
 ```javascript
 const Quidax = require('@quidax/src')
  
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.instantOrder.requoteInstantOrder('<account_id>', '<instantOrder_id>')
+const data = quidax.instantOrder.requoteInstantOrder('<account_id>', '<instantOrder_id>')
 
 ```
 
@@ -320,9 +326,9 @@ const quidax = quidax.instantOrder.requoteInstantOrder('<account_id>', '<instant
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.instantOrder.confirmInstantOrder('<account_id>', '<instantOrder_id>')
+const data = quidax.instantOrder.confirmInstantOrder('<account_id>', '<instantOrder_id>')
 
 ```
 
@@ -330,9 +336,9 @@ const quidax = quidax.instantOrder.confirmInstantOrder('<account_id>', '<instant
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.instantOrder.createInstantOrder('<account_id>', {
+const data = quidax.instantOrder.createInstantOrder('<account_id>', {
     "bid": "ngn",
     "ask": "btc",
     "type": "buy",
@@ -346,14 +352,14 @@ const quidax = quidax.instantOrder.createInstantOrder('<account_id>', {
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.instantOrder.createInstantOrder('<account_id>', {
-    "bid": "ngn",
-    "ask": "trx",
-    "type": "sell",
-    "volume": "0.00002",
-    "unit": "trx"
+const data = quidax.instantOrder.createInstantOrder('<account_id>', {
+    "bid": "usdt",
+    "ask": "bnb",
+    "type": "buy",
+    "volume": "0.2",
+    "unit": "usdt"
 })
 
 ```
@@ -363,14 +369,38 @@ const quidax = quidax.instantOrder.createInstantOrder('<account_id>', {
 ```javascript
 const Quidax = require('@quidax/src')
 
-quidax = new Quidax(secretKey)
+const quidax = new Quidax(secretKey)
 
-const quidax = quidax.instantOrder.createInstantOrder('<account_id>', {
+const data = quidax.instantOrder.createInstantOrder('<account_id>', {
     "bid": "ngn",
     "ask": "btc",
     "type": "buy",
     "volume": "5",
     "unit": "btc"
 }})
+
+```
+### **Quotes**: This endpoint is useed to get current price of an asset.
+&nbsp;
+```javascript
+const Quidax = require('@quidax/src')
+
+const quidax = new Quidax(secretKey)
+
+// Get an estimate how much btc can be bought with the stipulated price.
+const data1 = quidax.quotes.quote({ 
+    market: "btcngn",
+    unit: "ngn", 
+    kind: "bid", 
+    total: 2 
+})
+
+// Get an estimate how much it would cost to buy btc with ngn.
+const data2 = quidax.quotes.quote({ 
+    market: "btcngn", 
+    unit: "btc", 
+    kind: "bid", 
+    volume: 2 
+}) 
 
 ```

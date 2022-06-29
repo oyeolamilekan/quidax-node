@@ -5,16 +5,7 @@ const quidax = new Quidax(process.env.QUIDAX_SECRET_API)
 
 async function init() {
     try {
-
-      
-        
-        const data = await quidax.quotes.quote({
-            "market": "btcngn",
-            "unit": "ngn",
-            "kind": "ask",
-            "total": "200000"
-        })
-           
+        const data = await quidax.quotes.quote({ market: "usdtngn", unit: "usdt", kind: "ask", volume: 100 })
         console.log(data)
 
     } catch (error) {
