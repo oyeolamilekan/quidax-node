@@ -1,6 +1,6 @@
 {
   "name": "quidax-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Quidax Node library provides an easy access to the Quidax Developer API.",
   "main": "index.js",
   "scripts": {
