@@ -1,5 +1,5 @@
 {
-  "name": "@quidax/sdk",
+  "name": "quidax-node",
   "version": "1.0.0",
   "description": "The Quidax Node library provides an easy access to the Quidax Developer API.",
   "main": "index.js",
