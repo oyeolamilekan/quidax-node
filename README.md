@@ -15,7 +15,7 @@ See the [Quidax API docs](https://docs.quidax.com/docs/overview).
 #### Creates sub user
 
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -31,7 +31,7 @@ const data = quidax.users.create({
 #### Fetch all sub account
 
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -42,7 +42,7 @@ const data = quidax.users.getAllSubAccounts()
 #### Fetch user details
 
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -53,7 +53,7 @@ const data = quidax.users.getAccountDetails('<user_id>')
 #### Edit sub account
 
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -72,7 +72,7 @@ const data = quidax.users.editAccount('<user_id>',{
 
 #### List all the markets
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -82,7 +82,7 @@ const data = quidax.markets.listAllMarkets()
 
 #### List all market tickers
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -92,7 +92,7 @@ const data = quidax.markets.listMarketTickers()
 
 #### Fetch a market ticker.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -102,7 +102,7 @@ const data = quidax.markets.fetchMarketTicker('btcngn')
 
 #### Fetch orderbook items market.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -112,7 +112,7 @@ const data = quidax.markets.fetchOrderBookItemsForAMarket('btcngn', 5, 5)
 
 #### Fetch market ticker depth.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -122,7 +122,7 @@ const data = quidax.markets.fetchMarketTickerDepth('btcngn', 5)
 
 #### Fetch k line data pending trades.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -135,7 +135,7 @@ const data = quidax.markets.fetchKLineDataWithPendingTradesForAMarket('btcngn', 
 
 #### Fetch all user wallets
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -145,7 +145,7 @@ const data = quidax.wallets.fetchAllWallets('<user_id>')
 
 #### Fetches currency wallet.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -155,7 +155,7 @@ const data = quidax.wallets.fetchCurrencyWallet('<user_id>', 'btc')
 
 #### Fetch payment addresses related to the wallet
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -166,7 +166,7 @@ const data = quidax.wallets.fetchPaymentAddresses('<user_id>', 'btc')
 
 #### Fetch payment address for a wallet.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -176,7 +176,7 @@ const data = quidax.wallets.fetchPaymentAddress('<user_id>', 'btc')
 
 #### Create payment address for a customer
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -186,7 +186,7 @@ const data = quidax.wallets.createPaymentAddress('<user_id>', 'btc')
 
 #### Fetch payment address by id.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -199,7 +199,7 @@ const data = quidax.wallets.fetchPaymentAddressById('<user_id>', 'btc', '<addres
 
 #### Fetch trades of user.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -209,7 +209,7 @@ const data = quidax.trade.trades('<user_id>')
 
 #### Fetch recent trades for a given market pair.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -222,7 +222,7 @@ const data = quidax.trade.fetchRecentTradesForMarketPair('btcngn')
 
 #### Fetch orders of user.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -232,7 +232,7 @@ const data = quidax.orders.getAllOrders('me', 'btcngn', 'accepted', 'desc')
 
 #### Fetch order details.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -242,7 +242,7 @@ const data = quidax.orders.getOrderDetails('<account_id>', '<order_id>')
 
 #### Create a buy or sell order.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -258,7 +258,7 @@ const data = quidax.orders.createBuyOrSellOrder(
 
 #### Cancel order.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -271,7 +271,7 @@ const data = quidax.orders.cancelOrder('<account_id>', '<order_id>')
 
 #### Fetch orders of user.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -281,7 +281,7 @@ const data = quidax.deposit.fetchAllDeposit('<account_id>', 'btc', 'accepted')
 
 #### Fetch an order of user.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -294,7 +294,7 @@ const data = quidax.deposit.fetchDeposit('<account_id>', '<deposit_id>')
 
 #### Fetch all instantOrder of a user, filtered by user_id.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -304,7 +304,7 @@ const data = quidax.instantOrder.fetchAllInstantOrders('<account_id>', 'btcngn',
 
 #### Fetch detail instantOrder of user.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -314,7 +314,7 @@ const data = quidax.instantOrder.fetchInstantOrdersDetail('<account_id>', '<inst
 
 #### Requotes an instant order.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
  
 const quidax = new Quidax(secretKey)
 
@@ -324,7 +324,7 @@ const data = quidax.instantOrder.requoteInstantOrder('<account_id>', '<instantOr
 
 #### Confirm an instant order.
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -334,7 +334,7 @@ const data = quidax.instantOrder.confirmInstantOrder('<account_id>', '<instantOr
 
 #### Create an instant order(buy crypto from fiat).
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -350,7 +350,7 @@ const data = quidax.instantOrder.createInstantOrder('<account_id>', {
 
 #### Create an instant order(sell crypto to fiat).
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -367,7 +367,7 @@ const data = quidax.instantOrder.createInstantOrder('<account_id>', {
 
 #### Create an instant order(buy a fixed number of the asset, regardless of the price.).
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
@@ -383,7 +383,7 @@ const data = quidax.instantOrder.createInstantOrder('<account_id>', {
 ### **Quotes**: This endpoint is useed to get current price of an asset.
 &nbsp;
 ```javascript
-const Quidax = require('@quidax/sdk')
+const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
