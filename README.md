@@ -3,6 +3,14 @@ The Quidax Node library provides an easy access to the Quidax Developer API by [
 
 &nbsp;
 
+## Installation
+
+Install node-client with npm
+
+```bash
+  npm i quidax-node
+```
+
 ## Documentation
 See the [Quidax API docs](https://docs.quidax.com/docs/overview).
 
