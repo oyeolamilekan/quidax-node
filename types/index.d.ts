@@ -379,3 +379,5 @@ declare class Withdrawal {
      */
     fetchWithdrawals(userId: string, currency: string, state: string)
 }
+
+export default Quidax
