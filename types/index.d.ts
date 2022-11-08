@@ -7,21 +7,37 @@ declare class Quidax {
 
     constructor(secretKey: string)
 
-    public users = Users;
+    public users = new Users(
+        this.secretKey
+    );
 
-    public wallets = Wallets;
+    public wallets = new Wallets (
+        this.secretKey
+    );
 
-    public instantOrder = InstantOrder;
+    public instantOrder = new InstantOrder(
+        this.secretKey
+    );
 
-    public orders = Orders;
+    public orders = new Orders (
+        this.secretKey
+    );
 
-    public quotes = Quotes;
+    public quotes = new Quotes(
+        this.secretKey
+    );
 
-    public markets = Markets;
+    public markets = new Markets(
+        this.secretKey
+    );
 
-    public deposit = Deposits;
+    public deposit = new Deposits(
+        this.secretKey
+    );
 
-    public withdrawal = Withdrawal;
+    public withdrawal = new Withdrawal(
+        this.secretKey
+    );
 
 }
 
