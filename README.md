@@ -254,12 +254,17 @@ const Quidax = require('quidax-node')
 
 const quidax = new Quidax(secretKey)
 
+const payload = {
+    market: "btcngn",
+    side: "buy",
+    ord_type: "limit",
+    price: "1",
+    volume: "0.1"
+}
+
 const data = quidax.orders.createBuyOrSellOrder(
     '<account_id>', 
-    'btcngn', 'ask',
-    'market', 
-    '20', 
-    '50'
+    payload
 )
 
 ```
