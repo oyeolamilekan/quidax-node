@@ -30,7 +30,14 @@ describe("Order Collections", () => {
 
     it('Should create buy or sell order', async () => {
         try {
-            const data = await quidax.orders.createBuyOrSellOrder("me", "btcngn", "buy", "limit", "1", "0.1");
+            const payload = {
+                market: "btcngn",
+                side: "buy",
+                ord_type: "limit",
+                price: "1",
+                volume: "0.1"
+            }
+            const data = await quidax.orders.createBuyOrSellOrder("me", payload);
             order = data.data
             expect(data).to.be.an('object')
             expect(data.status).to.equal("success")
