@@ -49,20 +49,20 @@ declare class Users {
      * Create user
      * @returns {Promise<any | undefined>} 
      */
-    create(data: any)
+    create(data: any): Promise<any | undefined>
 
     /**
      * Fetch all sub account
      * @returns {Promise<any | undefined>}
      */
-    getAllSubAccounts()
+    getAllSubAccounts(): Promise<any | undefined>
 
     /**
      * Fetch user details
      * @param {string} accountId 
      * @returns {Promise<any | undefined>} 
      */
-    getAccountDetails(accountId: string)
+    getAccountDetails(accountId: string): Promise<any | undefined>
 
     /**
      * Edit sub account
@@ -74,7 +74,7 @@ declare class Users {
      * @param {string} data.phone_number
      * @returns {Promise<any | undefined>} 
      * */
-    editAccount(accountId: string, data: any)
+    editAccount(accountId: string, data: any): Promise<any | undefined>
 }
 
 declare class Wallets {
@@ -86,7 +86,7 @@ declare class Wallets {
      * @param {string} userId 
      * @returns {Promise<any | undefined>} 
      */
-    fetchAllWallets(userId: string)
+    fetchAllWallets(userId: string): Promise<any | undefined>
 
     /**
      * Fetches currency wallet.
@@ -94,7 +94,7 @@ declare class Wallets {
      * @param {string} currency 
      * @returns {Promise<any | undefined>} 
      */
-    fetchCurrencyWallet(userId: string, currency: string)
+    fetchCurrencyWallet(userId: string, currency: string): Promise<any | undefined>
 
     /**
      * Fetch payment addresses related to the wallet
@@ -102,7 +102,7 @@ declare class Wallets {
      * @param {string} currency 
      * @returns {Promise<any | undefined>} 
      */
-    fetchPaymentAddresses(userId: string, currency: string)
+    fetchPaymentAddresses(userId: string, currency: string): Promise<any | undefined>
 
     /**
      * Fetch payment address for a wallet.
@@ -110,7 +110,7 @@ declare class Wallets {
      * @param {string} currency 
      * @returns {Promise<any | undefined>} 
      */
-    fetchPaymentAddress(userId: string, currency: string)
+    fetchPaymentAddress(userId: string, currency: string): Promise<any | undefined>
 
     /**
      * Create payment address for a customer
@@ -118,7 +118,7 @@ declare class Wallets {
      * @param {string} currency 
      * @returns {Promise<any | undefined>} 
      */
-    createPaymentAddress(user_id: string, currency: string)
+    createPaymentAddress(user_id: string, currency: string): Promise<any | undefined>
 
     /**
      * Fetch payment address by id.
@@ -127,7 +127,7 @@ declare class Wallets {
      * @param {string} addressId 
      * @returns {Promise<any | undefined>} 
      */
-    fetchPaymentAddressById(userId: string, currency: string, addressId: string)
+    fetchPaymentAddressById(userId: string, currency: string, addressId: string): Promise<any | undefined>
 }
 
 declare class InstantOrder { 
@@ -141,7 +141,7 @@ declare class InstantOrder {
      * @param {string} orderBy 
      * @returns {Promise<any | undefined>}
      */
-    fetchAllInstantOrders(userId: string, market: string, state: string, orderBy: string)
+    fetchAllInstantOrders(userId: string, market: string, state: string, orderBy: string): Promise<any | undefined>
 
     /**
      * Fetches all instant order
@@ -149,7 +149,7 @@ declare class InstantOrder {
      * @param {string} instantOrderId 
      * @returns {Promise<any | undefined>}
      */
-    fetchInstantOrdersDetail(userId: string, instantOrderId: string)
+    fetchInstantOrdersDetail(userId: string, instantOrderId: string): Promise<any | undefined>
 
     /**
      * Creates an instant order.
@@ -163,7 +163,7 @@ declare class InstantOrder {
      * @param {string} data.unit 
      * @returns {Promise<any | undefined>} 
      */
-     createInstantOrder(userId: string, any: any)
+     createInstantOrder(userId: string, any: any): Promise<any | undefined>
 
      /**
      * Requotes an instant order.
@@ -171,7 +171,7 @@ declare class InstantOrder {
      * @param {string} instantOrderId 
      * @returns {Promise<any | undefined>}
      */
-    requoteInstantOrder(userId: string, instantOrderId: string)
+    requoteInstantOrder(userId: string, instantOrderId: string): Promise<any | undefined>
 
     /**
      * Confirm an instant order
@@ -179,7 +179,7 @@ declare class InstantOrder {
      * @param {string} instantOrderId 
      * @returns {Promise<any | undefined>}
      */
-     confirmInstantOrder(userId: string, instantOrderId: string)
+     confirmInstantOrder(userId: string, instantOrderId: string): Promise<any | undefined>
 }
 
 declare class Orders {
@@ -194,7 +194,7 @@ declare class Orders {
      * @param {strcreateBuyOrSellOrdering} orderBy 
      * @returns {Promise<any | undefined>}
      */
-    getAllOrders(accountId: string, market: string, state: string, orderBy: string)
+    getAllOrders(accountId: string, market: string, state: string, orderBy: string): Promise<any | undefined>
 
     /**
      * Fetch order details.
@@ -202,7 +202,7 @@ declare class Orders {
      * @param {string} orderId 
      * @returns {Promise<any | undefined>}
      */
-    getOrderDetails(accountId: string, orderId: string)
+    getOrderDetails(accountId: string, orderId: string): Promise<any | undefined>
 
     /**
      * Create a buy or sell order.
@@ -215,7 +215,7 @@ declare class Orders {
      * @param {string} data.volume 
      * @returns {Promise<any | undefined>}
      */
-    createBuyOrSellOrder(userId: string, data: any)
+    createBuyOrSellOrder(userId: string, data: any): Promise<any | undefined>
 
     /**
      * Cancel order.
@@ -223,7 +223,7 @@ declare class Orders {
      * @param {string} orderId 
      * @returns {Promise<any | undefined>}
      */
-    cancelOrder(accountId: string, orderId: string)
+    cancelOrder(accountId: string, orderId: string): Promise<any | undefined>
 
 }
 
@@ -241,7 +241,7 @@ declare class Quotes {
      * @param {string} data.total 
      * @returns {Promise<any | undefined>}
      */
-    quote(data: any)
+    quote(data: any): Promise<any | undefined>
 }
 
 declare class Trade {
@@ -253,14 +253,14 @@ declare class Trade {
      * @param {string} accountId 
      * @returns {Promise<any | undefined>}
      */
-    trades(accountId: string)
+    trades(accountId: string): Promise<any | undefined>
 
     /**
     * Fetch recent trades for a given market pair
     * @param {string} marketPair 
     * @returns {Promise<any | undefined>}
     */
-    fetchRecentTradesForMarketPair(marketPair: string)
+    fetchRecentTradesForMarketPair(marketPair: string): Promise<any | undefined>
 }
 
 declare class Markets {
@@ -271,20 +271,20 @@ declare class Markets {
      * List all the markets
      * @returns {Promise<any | undefined>} The response
      */
-    listAllMarkets()
+    listAllMarkets(): Promise<any | undefined>
 
     /**
      * List all market tickers
      * @returns {Promise<any | undefined>} The response
      */
-    listMarketTickers()
+    listMarketTickers(): Promise<any | undefined>
 
     /**
      * Fetch a market ticker.
      * @param {string} market 
      * @returns {Promise<any | undefined>} The response
      */
-    fetchMarketTicker(market: string)
+    fetchMarketTicker(market: string): Promise<any | undefined>
 
     /**
      * Fetch orderbook items market
@@ -293,7 +293,7 @@ declare class Markets {
      * @param {string} bidsLimit 
      * @returns {Promise<any | undefined>} The response
      */
-    fetchOrderBookItemsForAMarket(market: string, askLimit: string, bidsLimit: string)
+    fetchOrderBookItemsForAMarket(market: string, askLimit: string, bidsLimit: string): Promise<any | undefined>
 
     /**
     * Fetch market ticker depth
@@ -301,7 +301,7 @@ declare class Markets {
     * @param {string} limit 
     * @returns {Promise<any | undefined>} The response
     */
-    fetchMarketTickerDepth(market: string, limit: string)
+    fetchMarketTickerDepth(market: string, limit: string): Promise<any | undefined>
 
     /**
      * Fetch k line data pending trades
@@ -311,7 +311,7 @@ declare class Markets {
      * @param {string} timestamp 
      * @returns {Promise<any | undefined>} The response
      */
-    fetchKLineDataWithPendingTradesForAMarket(market: string, limit: string, period: string, timestamp: string)
+    fetchKLineDataWithPendingTradesForAMarket(market: string, limit: string, period: string, timestamp: string): Promise<any | undefined>
 }
 
 declare class Deposits {
@@ -325,7 +325,7 @@ declare class Deposits {
      * @param {string} state 
      * @returns {Promise<any | undefined>} The response
      */
-    fetchAllDeposit(userId: string, currency: string, state: string)
+    fetchAllDeposit(userId: string, currency: string, state: string): Promise<any | undefined>
 
      /**
      * Fetches a deposit
@@ -333,7 +333,7 @@ declare class Deposits {
      * @param {string} despositId 
      * @returns {Promise<any | undefined>} The response
      */
-    fetchDeposit(userId: string, despositId: string)
+    fetchDeposit(userId: string, despositId: string): Promise<any | undefined>
 }
 
 declare class Withdrawal {
@@ -352,7 +352,7 @@ declare class Withdrawal {
      * @param {string} data.fund_uid2 
      * @returns {Promise<any | undefined>} 
      */
-    createWithdrawal(userId: string, data: any)
+    createWithdrawal(userId: string, data: any): Promise<any | undefined>
 
     /**
      * Cancels a withdrawal request.
@@ -360,7 +360,7 @@ declare class Withdrawal {
      * @param {string} withdrawId 
      * @returns {Promise<any | undefined>} 
      */
-    cancelWithdrawal(userId: string, withdrawId: string)
+    cancelWithdrawal(userId: string, withdrawId: string): Promise<any | undefined>
 
     /**
      * Fetchs withdrawal detail
@@ -368,7 +368,7 @@ declare class Withdrawal {
      * @param {string} withdrawId 
      * @returns {Promise<any | undefined>} 
      */
-    fetchWithdrawal(userId: string, withdrawId: string)
+    fetchWithdrawal(userId: string, withdrawId: string): Promise<any | undefined>
 
     /**
      * Fetchs all withdrawal related to the currency.
@@ -377,7 +377,7 @@ declare class Withdrawal {
      * @param {string} state 
      * @returns {Promise<any | undefined>} 
      */
-    fetchWithdrawals(userId: string, currency: string, state: string)
+    fetchWithdrawals(userId: string, currency: string, state: string): Promise<any | undefined>
 }
 
 export default Quidax
