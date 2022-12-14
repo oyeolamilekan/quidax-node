@@ -1,6 +1,6 @@
 # Quidax Node Library
 The Quidax Node library provides an easy access to the Quidax Developer API by [Quidax](https://quidax.com).
-
+[![NPM version](https://img.shields.io/npm/v/quidax-node.svg)](https://npmjs.org/package/quidax-node)
 &nbsp;
 
 ## Installation
